@@ -1,10 +1,12 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+
 module.exports = {
     entry: "./src/index.tsx",
     output: {
         filename: "bundle.js",
-        path: __dirname + "/dist"
+        path: path.resolve(__dirname, "/dist")
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -45,14 +47,33 @@ module.exports = {
                 enforce: "pre", test: /\.js$/, loader: "source-map-loader" 
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss)$/,
                 use: [
-                    // fallback to style-loader in development
-                    process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader"  // creates style nodes from JS strings
-            ]
-            }
+                  {
+                    // Adds CSS to the DOM by injecting a `<style>` tag
+                    loader: 'style-loader'
+                  },
+                  {
+                    // Interprets `@import` and `url()` like `import/require()` and will resolve them
+                    loader: 'css-loader'
+                  },
+                  {
+                    // Loader for webpack to process CSS with PostCSS
+                    loader: 'postcss-loader',
+                    options: {
+                      plugins: function () {
+                        return [
+                          require('autoprefixer')
+                        ];
+                      }
+                    }
+                  },
+                  {
+                    // Loads a SASS/SCSS file and compiles it to CSS
+                    loader: 'sass-loader'
+                  }
+                ]
+              }
         ]
     },
     plugins: [

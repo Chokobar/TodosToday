@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import 'bootstrap';
+import './index.scss';
 import { App } from './App';
-
-import './index.scss'
 
 ReactDOM.render(
     <App />,

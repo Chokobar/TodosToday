@@ -1,9 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+
 $primary-color: green;
 
 body {
  background-color: $primary-color;
 }
 
-.test-class {
+.c {
     color: white;
 }
