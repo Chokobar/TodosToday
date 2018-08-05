@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Chokobar/TodosToday#readme",
   "devDependencies": {
+    "@material-ui/core": "^1.4.3",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
     "autoprefixer": "^9.0.1",
@@ -41,6 +42,7 @@
     "sass-loader": "^7.0.3",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.21.0",
+    "typeface-roboto": "0.0.54",
     "typescript": "^2.9.2",
     "w": "^1.1.0",
     "webpack": "^4.16.3",
