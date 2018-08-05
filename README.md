@@ -6,3 +6,5 @@
 [Setup Scss](https://github.com/webpack-contrib/sass-loader)
 
 [Setup BootStrap](https://stevenwestmoreland.com/2018/01/how-to-include-bootstrap-in-your-project-with-webpack.html)
+
+[Setup MaterialUI](https://material-ui.com/getting-started/installation/)
