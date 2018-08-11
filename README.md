@@ -8,3 +8,9 @@
 [Setup BootStrap](https://stevenwestmoreland.com/2018/01/how-to-include-bootstrap-in-your-project-with-webpack.html)
 
 [Setup MaterialUI](https://material-ui.com/getting-started/installation/)
+
+[Setup enzyme with JEST](http://airbnb.io/enzyme/docs/installation/)
+
+run specific test using 'node node_modules/jest/bin/jest.js testfile.test.ts'
+
+also install tslint

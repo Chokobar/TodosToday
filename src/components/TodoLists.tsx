@@ -10,7 +10,7 @@ interface ITodoListsState{
     listItems: any[];
 }
 
-class TodoLists extends React.Component<ITodoListsProps,ITodoListsState>{
+class TodoLists extends React.PureComponent<ITodoListsProps,ITodoListsState>{
     
     constructor(props: ITodoListsProps){
         super(props);
